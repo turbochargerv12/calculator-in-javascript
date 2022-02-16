@@ -1,0 +1,126 @@
+<html>
+<title>Calculator</title>
+<head>
+<style>
+.op {
+width: 135px;
+height: 40px;
+}
+input {
+height: 40px;
+width: 553px;
+font-size: 20px;
+background-color: cyan;
+}
+.cls {
+width: 554px;
+}
+body{
+background-color: black;
+}
+caption{
+color: blanchedalmond;
+font-family: Verdana;
+}
+p{
+color: blanchedalmond;
+}
+th{
+color: blanchedalmond;
+}
+h5,h2,h1{
+font-family: sans-serif;
+color: red;
+}
+label{
+color:silver
+}
+</style>
+</head>
+<body>
+<script>
+let r, a, b;
+function ADDITION() {
+a = document.getElementById("NUMBER1").value;
+b = document.getElementById("NUMBER2").value;
+r = +a + +b;
+document.getElementById("result").innerHTML = a + "+" + b + "=" + r;
+}
+function SUBSTRACT() {
+a = document.getElementById("NUMBER1").value;
+b = document.getElementById("NUMBER2").value;
+r = a - b;
+document.getElementById("result").innerHTML = a + "-" + b + "=" + r;
+}
+function DIVISION() {
+a = document.getElementById("NUMBER1").value;
+b = document.getElementById("NUMBER2").value;
+r = a / b;
+document.getElementById("result").innerHTML = a + "/" + b + "=" + r;
+}
+function MULTIPLICATION() {
+a = document.getElementById("NUMBER1").value;
+b = document.getElementById("NUMBER2").value;
+r = a * b;
+document.getElementById("result").innerHTML = a + "*" + b + "=" + r;
+}
+function cls() {
+document.getElementById("NUMBER1").value = "";
+document.getElementById("NUMBER2").value = "";
+document.getElementById("result").innerHTML = "";
+}
+</script>
+<center>
+<table>
+<th colspan="4">
+<h2>CALCULATOR IN JAVASCRIPT</h2>
+</th>
+<tr>
+<th colspan="4">
+<input type="number" id="NUMBER1" placeholder="1st Operand Here" />
+</th>
+</tr>
+<tr>
+<th colspan="4">
+<input
+type="number"
+id="NUMBER2"
+placeholder="2nd Operand Here"
+/>
+</th>
+</tr>
+<tr>
+<td>
+<input type="button" onclick="ADDITION()" value="+" id="ADDITION" class="op" />
+</td>
+<td>
+<input type="button" onclick= "SUBSTRACT()" value="-" id="SUBSTRACT" class="op" />
+</td>
+<td>
+<input type="button" onclick="MULTIPLICATION()" value="*" id="MULTIPLICATION"
+class="op" />
+</td>
+<td>
+<input type="button" onclick="DIVISION()" value="/" id="DIVISION" class="op" />
+</td>
+</tr>
+<tr>
+<td colspan=4">
+<input
+type="button"
+onclick="cls()"
+value="CLEAR"
+id="cls"
+class="cls"
+/>
+</td>
+</tr>
+<tr>
+<td>
+</td>
+</tr>
+</table>
+<h1>Result:<label id="result"></label></h1>
+</center>
+</body>
+</html>
